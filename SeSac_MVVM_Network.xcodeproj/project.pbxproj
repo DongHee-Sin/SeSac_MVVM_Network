@@ -21,6 +21,7 @@
 		D04B943D2913C6740046F5B6 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04B943C2913C6740046F5B6 /* SignUpView.swift */; };
 		D04B943F2913C67B0046F5B6 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04B943E2913C67B0046F5B6 /* SignUpViewModel.swift */; };
 		D04B94422913C7410046F5B6 /* CommonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04B94412913C7410046F5B6 /* CommonViewModel.swift */; };
+		D04B94452913D3820046F5B6 /* PlaceHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04B94442913D3820046F5B6 /* PlaceHolder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		D04B943C2913C6740046F5B6 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		D04B943E2913C67B0046F5B6 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		D04B94412913C7410046F5B6 /* CommonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewModel.swift; sourceTree = "<group>"; };
+		D04B94442913D3820046F5B6 /* PlaceHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				D04B94352913C5EB0046F5B6 /* Base */,
+				D04B94432913D3660046F5B6 /* CustomType */,
 				D04B94402913C7350046F5B6 /* Protocol */,
 			);
 			path = Utility;
@@ -148,6 +151,14 @@
 				D04B94412913C7410046F5B6 /* CommonViewModel.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		D04B94432913D3660046F5B6 /* CustomType */ = {
+			isa = PBXGroup;
+			children = (
+				D04B94442913D3820046F5B6 /* PlaceHolder.swift */,
+			);
+			path = CustomType;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +248,7 @@
 				D04B94372913C6020046F5B6 /* BaseViewController.swift in Sources */,
 				D04B94392913C6230046F5B6 /* BaseView.swift in Sources */,
 				D04B943D2913C6740046F5B6 /* SignUpView.swift in Sources */,
+				D04B94452913D3820046F5B6 /* PlaceHolder.swift in Sources */,
 				D04B94422913C7410046F5B6 /* CommonViewModel.swift in Sources */,
 				D04B943B2913C64F0046F5B6 /* SignUpViewController.swift in Sources */,
 				D04B943F2913C67B0046F5B6 /* SignUpViewModel.swift in Sources */,

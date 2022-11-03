@@ -15,20 +15,20 @@ final class SignUpView: BaseView {
     
     // MARK: - Propertys
     let userNameTextField = UITextField().then {
-        $0.placeholder = "닉네임을 입력하세요."
+        $0.placeholder = PlaceHolder.userName.rawValue
     }
     
     let emailTextField = UITextField().then {
-        $0.placeholder = "이메일을 입력하세요."
+        $0.placeholder = PlaceHolder.email.rawValue
         $0.keyboardType = .emailAddress
     }
     
     let passwordTextField = UITextField().then {
-        $0.placeholder = "비밀번호를 입력하세요."
+        $0.placeholder = PlaceHolder.password.rawValue
     }
     
     let signupButton = UIButton().then {
-        $0.setTitle("회원가입", for: .normal)
+        $0.setTitle(PlaceHolder.signUp.rawValue, for: .normal)
     }
     
     
