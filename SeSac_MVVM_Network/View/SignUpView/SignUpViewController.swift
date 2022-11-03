@@ -70,8 +70,22 @@ final class SignUpViewController: BaseViewController {
             .disposed(by: disposeBag)
         
         output.signUpTap
-            .bind { _ in
-                print("회원가입 버튼 Tap")
+            .withUnretained(self)
+            .bind { (vc, _) in
+                let api = EndPoint.signUp(userName: vc.viewModel.userName.value, email: vc.viewModel.email.value, password: vc.viewModel.password.value)
+                guard let url = api.url else { return }
+                APIService.share.request(type: SignUp.self, url: url, method: .post, parameters: api.parameters, headers: api.header) { [weak self] response in
+                    switch response {
+                    case .success(let value):
+                        print(value)
+                        self?.showAlert(title: "회원가입 성공", completionHandler: { _ in
+//                            let vc = LoginViewController()
+//                            self?.changeRootViewController(to: vc)
+                        })
+                    case .failure(let error):
+                        self?.showAlert(title: error.localizedDescription)
+                    }
+                }
             }
             .disposed(by: disposeBag)
         
