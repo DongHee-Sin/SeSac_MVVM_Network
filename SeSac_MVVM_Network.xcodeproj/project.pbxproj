@@ -17,6 +17,10 @@
 		D04B94332913C54F0046F5B6 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = D04B94322913C54F0046F5B6 /* Then */; };
 		D04B94372913C6020046F5B6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04B94362913C6020046F5B6 /* BaseViewController.swift */; };
 		D04B94392913C6230046F5B6 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04B94382913C6230046F5B6 /* BaseView.swift */; };
+		D04B943B2913C64F0046F5B6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04B943A2913C64F0046F5B6 /* SignUpViewController.swift */; };
+		D04B943D2913C6740046F5B6 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04B943C2913C6740046F5B6 /* SignUpView.swift */; };
+		D04B943F2913C67B0046F5B6 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04B943E2913C67B0046F5B6 /* SignUpViewModel.swift */; };
+		D04B94422913C7410046F5B6 /* CommonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04B94412913C7410046F5B6 /* CommonViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,10 @@
 		D04B941B2913C1FB0046F5B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D04B94362913C6020046F5B6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D04B94382913C6230046F5B6 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		D04B943A2913C64F0046F5B6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		D04B943C2913C6740046F5B6 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		D04B943E2913C67B0046F5B6 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		D04B94412913C7410046F5B6 /* CommonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				D04B94352913C5EB0046F5B6 /* Base */,
+				D04B94402913C7350046F5B6 /* Protocol */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -117,6 +126,9 @@
 		D04B94342913C5D80046F5B6 /* SignUpView */ = {
 			isa = PBXGroup;
 			children = (
+				D04B943A2913C64F0046F5B6 /* SignUpViewController.swift */,
+				D04B943C2913C6740046F5B6 /* SignUpView.swift */,
+				D04B943E2913C67B0046F5B6 /* SignUpViewModel.swift */,
 			);
 			path = SignUpView;
 			sourceTree = "<group>";
@@ -128,6 +140,14 @@
 				D04B94382913C6230046F5B6 /* BaseView.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		D04B94402913C7350046F5B6 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				D04B94412913C7410046F5B6 /* CommonViewModel.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +236,10 @@
 				D04B94102913C1FA0046F5B6 /* SceneDelegate.swift in Sources */,
 				D04B94372913C6020046F5B6 /* BaseViewController.swift in Sources */,
 				D04B94392913C6230046F5B6 /* BaseView.swift in Sources */,
+				D04B943D2913C6740046F5B6 /* SignUpView.swift in Sources */,
+				D04B94422913C7410046F5B6 /* CommonViewModel.swift in Sources */,
+				D04B943B2913C64F0046F5B6 /* SignUpViewController.swift in Sources */,
+				D04B943F2913C67B0046F5B6 /* SignUpViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
