@@ -11,22 +11,13 @@ import RxSwift
 import RxCocoa
 
 
-final class SignUpViewModel {
+final class SignUpViewModel: CheckValidEmail {
     
     let userName = BehaviorRelay<String>(value: "")
     let email = BehaviorRelay<String>(value: "")
     let password = BehaviorRelay<String>(value: "")
     let isButtonEnabled = PublishRelay<Bool>()
-    
-    
-    
-    
-    private func isValidEmail(value: String) -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
 
-        return emailTest.evaluate(with: value)
-    }
 }
 
 
@@ -40,10 +31,6 @@ extension SignUpViewModel: CommonViewModel {
         let emailTextField: ControlProperty<String?>
         let passwordTextField: ControlProperty<String?>
         let signUpTap: ControlEvent<Void>
-        
-        let userNameText: BehaviorRelay<String>
-        let emailText: BehaviorRelay<String>
-        let passwordText: BehaviorRelay<String>
     }
     
     
@@ -60,12 +47,12 @@ extension SignUpViewModel: CommonViewModel {
     
     
     func transform(input: Input) -> Output {
-        let userNameValidation = input.userNameText.map { $0.count >= 2 }.distinctUntilChanged()
-        let emailValidation = input.emailText.withUnretained(self)
-            .map { (vc, value) in
-                vc.isValidEmail(value: value)
+        let userNameValidation = userName.map { $0.count >= 2 }.distinctUntilChanged()
+        let emailValidation = email.withUnretained(self)
+            .map { (vm, value) in
+                vm.isValidEmail(value: value)
             }.distinctUntilChanged()
-        let passwordValidation = input.passwordText.map { $0.count >= 8 }.distinctUntilChanged()
+        let passwordValidation = password.map { $0.count >= 8 }.distinctUntilChanged()
         
         return Output(userNameTextField: input.userNameTextField.orEmpty,
                       emailTextField: input.emailTextField.orEmpty,

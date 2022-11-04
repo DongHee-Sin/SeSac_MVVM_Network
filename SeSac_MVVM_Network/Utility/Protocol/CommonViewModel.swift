@@ -8,7 +8,7 @@
 import Foundation
 
 
-protocol CommonViewModel {
+protocol CommonViewModel: AnyObject {
     associatedtype Input
     associatedtype Output
     

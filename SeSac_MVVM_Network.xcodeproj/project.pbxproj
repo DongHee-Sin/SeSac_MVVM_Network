@@ -33,6 +33,7 @@
 		D04B94452913D3820046F5B6 /* PlaceHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04B94442913D3820046F5B6 /* PlaceHolder.swift */; };
 		D0D369F029153C1000A33595 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D369EF29153C1000A33595 /* LoginView.swift */; };
 		D0D369F2291540D700A33595 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D369F1291540D700A33595 /* LoginViewModel.swift */; };
+		D0D369F42915585A00A33595 /* CheckValidEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D369F32915585A00A33595 /* CheckValidEmail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		D04B94442913D3820046F5B6 /* PlaceHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolder.swift; sourceTree = "<group>"; };
 		D0D369EF29153C1000A33595 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D0D369F1291540D700A33595 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		D0D369F32915585A00A33595 /* CheckValidEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckValidEmail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				D04B94412913C7410046F5B6 /* CommonViewModel.swift */,
+				D0D369F32915585A00A33595 /* CheckValidEmail.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				D04914E729141BAD00EF2156 /* LoginError.swift in Sources */,
 				D04914E1291417A300EF2156 /* Profile.swift in Sources */,
 				D04914EC291424F900EF2156 /* UIViewController+Extension.swift in Sources */,
+				D0D369F42915585A00A33595 /* CheckValidEmail.swift in Sources */,
 				D04B94102913C1FA0046F5B6 /* SceneDelegate.swift in Sources */,
 				D04B94372913C6020046F5B6 /* BaseViewController.swift in Sources */,
 				D0D369F2291540D700A33595 /* LoginViewModel.swift in Sources */,

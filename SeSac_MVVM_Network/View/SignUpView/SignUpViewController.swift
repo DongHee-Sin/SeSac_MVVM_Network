@@ -42,10 +42,7 @@ final class SignUpViewController: BaseViewController {
         let input = SignUpViewModel.Input(userNameTextField: signupView.userNameTextField.rx.text,
                                           emailTextField: signupView.emailTextField.rx.text,
                                           passwordTextField: signupView.passwordTextField.rx.text,
-                                          signUpTap: signupView.signupButton.rx.tap,
-                                          userNameText: viewModel.userName,
-                                          emailText: viewModel.email,
-                                          passwordText: viewModel.password)
+                                          signUpTap: signupView.signupButton.rx.tap)
         let output = viewModel.transform(input: input)
         
         

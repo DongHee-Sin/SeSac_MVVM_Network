@@ -46,7 +46,13 @@ final class LoginViewController: BaseViewController {
     
     private func bind() {
         
-        loginView.emailTextField.rx.text.orEmpty
+        let input = LoginViewModel.Input(emailText: loginView.emailTextField.rx.text,
+                                         passwordText: loginView.passwordTextField.rx.text,
+                                         loginTap: loginView.loginButton.rx.tap,
+                                         signUpTap: loginView.signUpButton.rx.tap)
+        let output = viewModel.transform(input: input)
+        
+        output.emailText
             .withUnretained(self)
             .bind { (vc, value) in
                 vc.viewModel.email.accept(value)
@@ -54,7 +60,7 @@ final class LoginViewController: BaseViewController {
             .disposed(by: disposeBag)
         
         
-        loginView.passwordTextField.rx.text.orEmpty
+        output.passwordText
             .withUnretained(self)
             .bind { (vc, value) in
                 vc.viewModel.password.accept(value)
@@ -62,18 +68,14 @@ final class LoginViewController: BaseViewController {
             .disposed(by: disposeBag)
         
         
-        Observable.combineLatest(viewModel.email, viewModel.password)
-            .bind { [weak self] (email, password) in
-                if email.count >= 1 && password.count >= 8 {
-                    self?.loginView.loginButton.isEnabled = true
-                }else {
-                    self?.loginView.loginButton.isEnabled = false
-                }
-            }
+        output.loginButtonValidation
+            .bind(onNext: { value in
+                self.loginView.loginButton.isEnabled = value
+            })
             .disposed(by: disposeBag)
         
         
-        loginView.loginButton.rx.tap
+        output.loginTap
             .withUnretained(self)
             .bind { (vc, _) in
                 let api = EndPoint.login(email: vc.viewModel.email.value, password: vc.viewModel.password.value)
@@ -92,7 +94,7 @@ final class LoginViewController: BaseViewController {
             }
             .disposed(by: disposeBag)
         
-        loginView.signUpButton.rx.tap
+        output.signUpTap
             .withUnretained(self)
             .bind { (vc, _) in
                 let signUpVC = SignUpViewController()
