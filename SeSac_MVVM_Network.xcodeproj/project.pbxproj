@@ -31,6 +31,8 @@
 		D04B943F2913C67B0046F5B6 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04B943E2913C67B0046F5B6 /* SignUpViewModel.swift */; };
 		D04B94422913C7410046F5B6 /* CommonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04B94412913C7410046F5B6 /* CommonViewModel.swift */; };
 		D04B94452913D3820046F5B6 /* PlaceHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04B94442913D3820046F5B6 /* PlaceHolder.swift */; };
+		D0D369F029153C1000A33595 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D369EF29153C1000A33595 /* LoginView.swift */; };
+		D0D369F2291540D700A33595 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D369F1291540D700A33595 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,8 @@
 		D04B943E2913C67B0046F5B6 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		D04B94412913C7410046F5B6 /* CommonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewModel.swift; sourceTree = "<group>"; };
 		D04B94442913D3820046F5B6 /* PlaceHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolder.swift; sourceTree = "<group>"; };
+		D0D369EF29153C1000A33595 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D0D369F1291540D700A33595 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				D04914EF2914267600EF2156 /* LoginViewController.swift */,
+				D0D369EF29153C1000A33595 /* LoginView.swift */,
+				D0D369F1291540D700A33595 /* LoginViewModel.swift */,
 			);
 			path = LoginView;
 			sourceTree = "<group>";
@@ -310,6 +316,7 @@
 				D04914EC291424F900EF2156 /* UIViewController+Extension.swift in Sources */,
 				D04B94102913C1FA0046F5B6 /* SceneDelegate.swift in Sources */,
 				D04B94372913C6020046F5B6 /* BaseViewController.swift in Sources */,
+				D0D369F2291540D700A33595 /* LoginViewModel.swift in Sources */,
 				D04B94392913C6230046F5B6 /* BaseView.swift in Sources */,
 				D04B943D2913C6740046F5B6 /* SignUpView.swift in Sources */,
 				D04B94452913D3820046F5B6 /* PlaceHolder.swift in Sources */,
@@ -318,6 +325,7 @@
 				D04914E5291419E600EF2156 /* UserDefaultsManager.swift in Sources */,
 				D04B943B2913C64F0046F5B6 /* SignUpViewController.swift in Sources */,
 				D04914E92914243600EF2156 /* SignUp.swift in Sources */,
+				D0D369F029153C1000A33595 /* LoginView.swift in Sources */,
 				D04914DF2914179600EF2156 /* Login.swift in Sources */,
 				D04B943F2913C67B0046F5B6 /* SignUpViewModel.swift in Sources */,
 			);

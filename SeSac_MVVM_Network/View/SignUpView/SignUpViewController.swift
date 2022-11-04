@@ -34,15 +34,7 @@ final class SignUpViewController: BaseViewController {
     
     // MARK: - Methods
     override func configure() {
-        view.backgroundColor = .white
-        
-        setNavigationBar()
         bind()
-    }
-    
-    
-    private func setNavigationBar() {
-        navigationItem.title = "회원가입"
     }
     
     
@@ -54,7 +46,7 @@ final class SignUpViewController: BaseViewController {
                                           userNameText: viewModel.userName,
                                           emailText: viewModel.email,
                                           passwordText: viewModel.password)
-        let output = viewModel.transfrom(input: input)
+        let output = viewModel.transform(input: input)
         
         
         output.userNameTextField
@@ -74,13 +66,13 @@ final class SignUpViewController: BaseViewController {
             .bind { (vc, _) in
                 let api = EndPoint.signUp(userName: vc.viewModel.userName.value, email: vc.viewModel.email.value, password: vc.viewModel.password.value)
                 guard let url = api.url else { return }
+                
                 APIService.share.request(type: SignUp.self, url: url, method: .post, parameters: api.parameters, headers: api.header) { [weak self] response in
+                    
                     switch response {
-                    case .success(let value):
-                        print(value)
+                    case .success(_):
                         self?.showAlert(title: "회원가입 성공", completionHandler: { _ in
-//                            let vc = LoginViewController()
-//                            self?.changeRootViewController(to: vc)
+                            self?.dismiss(animated: true)
                         })
                     case .failure(let error):
                         self?.showAlert(title: error.localizedDescription)

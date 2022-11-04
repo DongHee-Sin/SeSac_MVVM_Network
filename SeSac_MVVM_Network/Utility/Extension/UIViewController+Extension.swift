@@ -39,4 +39,24 @@ extension UIViewController {
         sceneDelegate?.window?.makeKeyAndVisible()
     }
     
+    
+    
+    
+    // MARK: - Transition VC
+    enum TransitionStyle {
+            case present
+            case push
+        }
+        
+        
+        func transition<T: UIViewController>(_ viewController: T, transitionStyle: TransitionStyle = .present) {
+            
+            switch transitionStyle {
+            case .present:
+                self.present(viewController, animated: true)
+            case .push:
+                self.navigationController?.pushViewController(viewController, animated: true)
+            }
+            
+        }
 }

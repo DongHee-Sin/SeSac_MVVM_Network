@@ -59,7 +59,7 @@ extension SignUpViewModel: CommonViewModel {
     }
     
     
-    func transfrom(input: Input) -> Output {
+    func transform(input: Input) -> Output {
         let userNameValidation = input.userNameText.map { $0.count >= 2 }.distinctUntilChanged()
         let emailValidation = input.emailText.withUnretained(self)
             .map { (vc, value) in

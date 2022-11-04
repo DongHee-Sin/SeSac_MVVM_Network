@@ -45,7 +45,7 @@ final class SignUpView: BaseView {
     override func setConstraint() {
         userNameTextField.snp.makeConstraints { make in
             make.horizontalEdges.equalTo(self).inset(30)
-            make.top.equalTo(self.safeAreaLayoutGuide).offset(20)
+            make.top.equalTo(self.safeAreaLayoutGuide).offset(50)
             make.height.equalTo(50)
         }
         

@@ -13,4 +13,5 @@ enum PlaceHolder: String {
     case email = "이메일을 입력하세요"
     case password = "비밀번호를 입력하세요"
     case signUp = "회원가입"
+    case login = "로그인"
 }
